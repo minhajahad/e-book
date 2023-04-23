@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Log in</title>
+<style>
+     p.round3 {
+       border: 4px dotted black;
+       border-radius: 12px;
+	   margin-right: 600px;
+	   margin-left: 600px;
+       padding: 7px;
+              }
+     body {
+       background-image: url("output-onlinepngtools (1).png");
+       background-repeat: no-repeat;
+       background-position: left top;
+       margin-left: 20px;
+       background-attachment: fixed;
+		  }
+
+</style>
+</head>
+
+<body>
+
+<p class="round3" align="center" style="font-size: 23pt"><b>Login</b></p>
+<b>
+<form align="center" style="font-size: 15pt">
+  <label for="uname" >Username: </label>
+    <input type="text" placeholder="" name="uname" required><br><br>
+  <label for="psw">Password: </label>
+    <input type="password" placeholder="" name="psw" required><br><br>
+    <button type="submit" style="font-size:80%;">Login</button>
+  <label>
+    <input type="checkbox" name="remember"> Remember me<br>
+
+</form>
+<p>New user? Please <a href="Sign-up.html">Sign-up</a></p>
+<p>Return to <a href="Home.html">home</a> page.</p>
+</b>
+</body>
+</html>

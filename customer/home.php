@@ -1,0 +1,89 @@
+<?php
+	session_start();
+	if($_SESSION['customer_login_status']!="logged in" and ! isset($_SESSION['user_name'])){
+	header("Location:../Login.php");}
+	//logout code
+	if(isset($_GET['sign']) and $_GET['sign']=="out"){
+		$_SESSION['customer_login_status']="logged out";
+		unset($_SESSION['user_name']);
+	header("Location:../Login.php");
+	}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+<link rel="stylesheet" href="Index.css">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<ul>
+  <li><a class="active" href="home.php">Home</a></li>
+  <li><a href="products.php">All Books</a></li>
+  <li><a href="porder.php">Place order</a></li>
+  <li><a href="chngpass.php">Change password</a></li>
+  <li><a href="myprofile.php">My profile</a></li>
+  <li><a href="?sign=out">Logout</a></li>
+</ul><br>
+
+<div class="topnav">
+<center>
+  <div class="search-container">
+    <form>
+		<input type="text" name="search" placeholder="Search..">
+    </form>
+  </div>
+</center>
+</div>
+
+
+
+<div class="row">
+    <div class="column">
+        <h2 align="center"><u>Popular books</u></h2>
+            <div>
+			<center>
+                    <a href="Medical.php">
+                        <img class="box" src="https://static1.eboighar.com/twelvegroupitems/medical-book2020-08-22-32020-08-22.svg" alt="মেডিকেল বই" style="height:80px;width:auto">
+                        <h3 class="py-3" style="font-size:1rem;">Medical books</h3></a>
+                    <a href="IELTS.php">
+                        <img class="box" src="https://static1.eboighar.com/twelvegroupitems/ielts2020-02-27.svg" alt="IELTS &amp; TOEFL" style="height:80px;width:auto">
+                        <h3 class="py-3" style="font-size:1rem;">IELTS &amp; TOEFL</h3><a>
+                    <a href="Admission.php">
+                        <img class="box" src="https://static1.eboighar.com/twelvegroupitems/00202021-10-18.svg" alt="বিশ্ববিদ্যালয় ভর্তি গাইড" style="height:80px;width:auto">
+                        <h3 class="py-3" style="font-size:1rem;">University Admission Guide</h3></a>
+					<a class="btn btn-outline-primary btn-seeall btn-lg my-3" href="#" align = center>
+                                    SEE ALL</a>
+            </center>
+			</div>
+                            
+    </div>
+	<div class="column">
+	<center>
+	<br><br><br><br>
+		<img src="book.jpg" width="400" height="400">
+	</div>
+	<div class="column">
+        <h2 align="center"><u>Browse</u></h2>
+            <div>
+			<center>
+                    <a class="col-6 col-sm-3 col-md-6 col-lg-6 col-xl-6" href="Categories.php">
+                        <img class="box" src="https://static1.eboighar.com/twelvegroupitems/categories-32x322021-08-20.svg" alt="Categories" style="height:80px;width:auto">
+                         <h3 class="py-3" style="font-size:1rem;">Categories</h3></a>
+                    <a class="col-6 col-sm-3 col-md-6 col-lg-6 col-xl-6" href="Publishers.php">
+                        <img class="box" src="https://static1.eboighar.com/twelvegroupitems/publishers-32x322021-08-20.svg" alt="Publishers" style="height:80px;width:auto">
+                        <h3 class="py-3" style="font-size:1rem;">Publishers</h3></a>
+                    <a class="col-6 col-sm-3 col-md-6 col-lg-6 col-xl-6" href="Authors.php">
+                        <img class="box" src="https://static1.eboighar.com/twelvegroupitems/authors-32x322021-08-20.svg" alt="Authors" style="height:80px;width:auto">
+                        <h3 class="py-3" style="font-size:1rem;">Authors</h3></a>
+					<a class="btn btn-outline-primary btn-seeall btn-lg my-3" href="#">
+                                    SEE ALL</a>
+            </center>
+			</div>
+    </div>
+	
+</div>
+
+</body>
+</html>
